@@ -1,0 +1,29 @@
+GNU nano 5.6.1                                                          index.html
+<!-- Include Radiant Media Player - here we use the optimised build for hls.js -->
+<script src="https://cdn.radiantmediatechs.com/rmp/9.12.0/js/rmp-hlsjs.min.js"></script>
+<!-- Player container element -->
+<div id="rmp"></div>
+<!-- Set up player configuration options -->
+<script>
+// Here we set our HLS streaming source
+const src = {
+  hls: 'http://103.68.104.80:80/hls/shamim/1080/shamim.mp4/index.m3u8'
+};
+
+
+const settings = {
+  licenseKey: 'ZW5ieGlkcGtna0AxNjQwODAz',
+  src: src,
+  width: 640,
+  height: 360,
+  contentMetadata: {
+    poster: [
+      'maxresdefault.jpg'
+
+    ]
+  }
+};
+const rmp = new RadiantMP('rmp');
+rmp.init(settings);
+</script>
+
